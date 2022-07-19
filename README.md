@@ -16,14 +16,14 @@
 
 - Clone this repo locally using git in the command line and the following command
 ~~~
-> git clone https://github.com/zhadier/morse-code 
+> git clone git@github.com:mandelatuks/OOP-school-library.git
 ~~~
 - Alternatively, you can just download the complete zip file and extract the folder in your directory
 ### Step 2:
 
-- In the project directory, you can run:
+- To move into this project directory, you can run:
 ~~~
-> ruby Morse.rb
+> cd OOP-school-library
 ~~~
 
 - or alternatively you can copy and paste the commands in
