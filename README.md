@@ -1,59 +1,46 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# OOP school library
 
-> One paragraph statement about the project.
+> this project is about building school library using Ruby
 
-![screenshot](./app_screenshot.png)
+##
 
-Additional description about the project and its features.
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+## Built with:
+- Ruby
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**To launch the project locally:**
+### Step 1:
 
+- Clone this repo locally using git in the command line and the following command
+~~~
+> git clone https://github.com/zhadier/morse-code 
+~~~
+- Alternatively, you can just download the complete zip file and extract the folder in your directory
+### Step 2:
 
-To get a local copy up and running follow these simple example steps.
+- In the project directory, you can run:
+~~~
+> ruby Morse.rb
+~~~
 
-### Prerequisites
+- or alternatively you can copy and paste the commands in
+~~~
+> irb 
+~~~
 
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+##
 
 ## Authors
 
-👤 **Author1**
+👤 **Mandela T**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@mandelatuks](https://github.com/mandelatuks)
+- Twitter: [@MandelaTm1](https://twitter.com/MandelaTm1)
+- LinkedIn: [@Mandela Tumukunde](https://www.linkedin.com/in/mandela-tumukunde-794755194/) 
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
