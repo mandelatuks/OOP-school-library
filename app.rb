@@ -129,7 +129,7 @@ class App
   def create_book
     print 'Title:'
     title = gets.chomp
-    print 'Author: '
+    print 'Author  '
     author = gets.chomp
     @books << Book.new(title, author)
     message('Book created successfully', 'Happy learning')
