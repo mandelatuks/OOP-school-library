@@ -104,7 +104,7 @@ class App
   def create_teacher
     print 'Enter Name: '
     name = gets.chomp
-    print ' Enter Age'
+    print ' Enter Age: '
     age = gets.chomp
     print 'Specialization:'
     specialization = gets.chomp
