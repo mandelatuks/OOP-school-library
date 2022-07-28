@@ -2,13 +2,18 @@ require_relative 'create_book'
 require_relative 'create_person'
 require_relative 'create_student'
 require_relative 'create_teacher'
+require_relative 'create_rental'
 
 class Options
+  attr_accessor :title, :author
+
   def initialize
     @people = []
     @books = []
+    @rentals = []
     @create_person = CreatePerson.new(@people)
     @create_book = CreateBook.new(@books)
+    @create_rental = CreateRental.new(@people, @books)
   end
 
   def print_options
@@ -34,7 +39,7 @@ class Options
     when '4'
       @create_book.create_book
     when '5'
-      create_rental
+      @create_rental.create_rental
     when '6'
       list_all_rentals
     end
@@ -48,17 +53,18 @@ class Options
       end
 
     else
-      message('There is no book to display', 'kindly add some books')
+      print('There is no book to display', 'kindly add some books')
     end
   end
 
   def list_all_people
     if @people.length.positive?
       @people.each_with_index do |person, index|
-        puts "#{index + 1}) Name:#{person.name}, ID: #{person.id}, Age: #{person.age}"
+        puts "#{index + 1}) Name:#{person.name}, ID: #{person.id}, Age: #{person.age}" if person.is_a?(Student)
+        puts "#{index + 1}) Name:#{person.name}, ID: #{person.id}, Age: #{person.age}" if person.is_a?(Teacher)
       end
     else
-      message('There is no person to display', 'Add person profiles first')
+      print('There is no person to display', 'Add person profiles first')
     end
   end
 
@@ -68,11 +74,11 @@ class Options
     person_details = @people.find { |person| person.id == id }
     if person_details
       puts 'Rentals'
-      person_details.rental.each_with_index do |rental, index|
-        puts "#{index + 1}) #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
+      person_details.rentals.each_with_index do |rental, index|
+        puts "#{index + 1}) #{rental.date}, Book: #{rental.person.title} by #{rental.person.author}"
       end
     else
-      message('There is no rental to display', 'Please create rental record')
+      print('There is no rental to display', 'Please create rental record')
     end
   end
 end

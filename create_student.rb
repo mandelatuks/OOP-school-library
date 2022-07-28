@@ -14,7 +14,7 @@ class CreateStudent
     parent_permission = true && gets.chomp.downcase == 'y'
     print 'classroom:'
     classroom = gets.chomp
-    @people << Student.new(age, name, parent_permission, classroom)
-    message('Person created successfully', 'New student was added')
+    @people << Student.new(age, classroom, name, parent_permission)
+    print('Person created successfully', 'New student was added')
   end
 end

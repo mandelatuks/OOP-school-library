@@ -12,8 +12,8 @@ class CreateTeacher
     age = gets.chomp
     print 'Specialization:'
     specialization = gets.chomp
-    person = Teacher.new(age, name, specialization)
+    person = Teacher.new(age, specialization, name)
     @people << person
-    message('Person created successfullly', 'New Teacher was added')
+    print('Person created successfullly', 'New Teacher was added')
   end
 end

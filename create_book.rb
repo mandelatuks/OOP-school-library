@@ -11,6 +11,6 @@ class CreateBook
     print 'Author  '
     author = gets.chomp.strip.capitalize
     @books << Book.new(title, author)
-    message('Book created successfully', 'Happy learning')
+    print('Book created successfully', 'Happy learning')
   end
 end
