@@ -1,9 +1,10 @@
 # rubocop: disable Style/OptionalBooleanParameter
 
 require_relative './nameable'
+require_relative 'rental'
 
 class Person < Nameable
-  attr_accessor :age, :name, :rental
+  attr_accessor :age, :name, :rentals
   attr_reader :id
 
   def initialize(age, name = 'Unknown', parent_permission = true)
@@ -12,7 +13,7 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
-    @rental = []
+    @rentals = []
   end
 
   def of_age?
