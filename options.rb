@@ -39,4 +39,16 @@ class Options
       list_all_rentals
     end
   end
+
+  def list_all_books
+    puts 'Books'.upcase
+    if @books.length.positive?
+      @books.each_with_index do |book, index|
+        puts "#{index + 1}) Tittle: #{book.title}, Author: #{book.author}"
+      end
+
+    else
+      message('There is no book to display', 'kindly add some books')
+    end
+  end
 end
