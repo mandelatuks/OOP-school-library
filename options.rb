@@ -1,4 +1,16 @@
+require_relative 'create_book'
+require_relative 'create_person'
+require_relative 'create_student'
+require_relative 'create_teacher'
+
 class Options
+  def initialize
+    @people = []
+    @books = []
+    @create_person = CreatePerson.new(@people)
+    @create_book = CreateBook.new(@books)
+  end
+
   def print_options
     puts ''
     puts 'please choose operation from the following options'
@@ -18,10 +30,9 @@ class Options
     when '2'
       list_all_people
     when '3'
-      create_person
-
+      @create_person.create_person
     when '4'
-      create_book
+      @create_book.create_book
     when '5'
       create_rental
     when '6'
