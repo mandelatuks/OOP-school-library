@@ -61,35 +61,33 @@ class App
     end
   end
 
-  def person_info
-    print 'Age: '
-    age = gets.chomp
+  # def person_info
+  #   print 'Age: '
+  #   age = gets.chomp
 
-    print 'Name: '
-    name = gets.chomp
-    [age, name]
-  end
+  #   print 'Name: '
+  #   name = gets.chomp
+  #   [age, name]
+  # end
 
-  
+  # def book_info
+  #   print 'Title: '
+  #   title = gets.chomp
 
-  def book_info
-    print 'Title: '
-    title = gets.chomp
+  #   print 'Author: '
+  #   author = gets.chomp
+  #   [title, author]
+  # end
 
-    print 'Author: '
-    author = gets.chomp
-    [title, author]
-  end
-
-  def create_book
-    # print 'Title:'
-    # title = gets.chomp
-    # print 'Author  '
-    # author = gets.chomp
-    title, author = book_info
-    @books << Book.new(title, author)
-    message('Book created successfully', 'Happy learning')
-  end
+  # def create_book
+  #   # print 'Title:'
+  #   # title = gets.chomp
+  #   # print 'Author  '
+  #   # author = gets.chomp
+  #   title, author = book_info
+  #   @books << Book.new(title, author)
+  #   message('Book created successfully', 'Happy learning')
+  # end
 
   def create_rental
     puts 'Select a book from the following list by ID'
