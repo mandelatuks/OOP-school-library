@@ -1,4 +1,5 @@
 require_relative 'create_student'
+require_relative 'create_teacher'
 
 class CreatePerson
   def initialize(people)
