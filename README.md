@@ -2,7 +2,7 @@
 
 # OOP school library
 
-> this project is about building school library using Ruby
+> A school library app to record what books are in the library and who borrows them. The app that you will create will allow you to: add new students or teachers, add new books and save records of who borrowed a given book and when.
 
 ##
 
@@ -43,11 +43,9 @@
 
 👤 **Lembani Sakala**
 
-- GitHub: [@mandelatuks](https://github.com/mandelatuks)
-- Twitter: [@MandelaTm1](https://twitter.com/MandelaTm1)
-- LinkedIn: [@Mandela Tumukunde](https://www.linkedin.com/in/mandela-tumukunde-794755194/) 
-
-
+- GitHub: [@lembani](https://github.com/lembani)
+- Twitter: [@lembani_](https://twitter.com/lembani_)
+- LinkedIn: [lembani-sakala](https://linkedin.com/in/lembani-sakala)
 
 ## 🤝 Contributing
 
