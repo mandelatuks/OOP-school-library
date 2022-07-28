@@ -1,53 +1,27 @@
-require_relative 'person'
-require_relative 'student'
-require_relative 'teacher'
-require_relative 'rental'
-require_relative 'book'
-require_relative 'classroom'
+# require_relative 'person'
+# require_relative 'student'
+# require_relative 'teacher'
+# require_relative 'rental'
+# require_relative 'book'
+# require_relative 'classroom'
+require_relative 'options'
 
 class App
-  attr_reader :people, :books, :rentals
-
   def initialize
-    @people = []
-    @books = []
-    @rentals = []
+    # it create an instance of option
+    @options = Options.new
   end
 
-  def choose_option(operation)
-    case operation
-    when '1'
-      list_all_books
-    when '2'
-      list_all_people
-    when '3'
-      create_person
-
-    when '4'
-      create_book
-    when '5'
-      create_rental
-    when '6'
-      list_all_rentals
-    end
-    print_options
-  end
-
-  def print_options
-    puts ''
+  def run
     puts 'WELCOME TO MANDELA LIBRARY APP! '
-    puts ''
-    puts 'please choose operation from the following options'
-    puts '1 list all books'
-    puts '2 list all people'
-    puts '3 create a person'
-    puts '4 create a book'
-    puts '5 create a rental'
-    puts '6 list all rentals for a given person id'
-    puts 'q Quit'
-    operation = gets.chomp
-    exit if operation == 'q'
-    choose_option(operation)
+    loop do
+      @options.print_options
+      operation = gets.chomp
+      exit if operation == 'q'
+
+      @options.choose_option operation
+    end
+    puts 'thank you for using the app'
   end
 
   def message(issue, recommendation)
@@ -87,25 +61,20 @@ class App
     end
   end
 
-  def create_student
-    print 'Enter Name:'
-    name = gets.chomp
-    print 'Enter Age:'
+  def person_info
+    print 'Age: '
     age = gets.chomp
-    print 'Has parent permssion? [Y/N]'
-    parent_permission = true && gets.chomp.downcase == 'y'
-    print 'classroom:'
-    classroom = gets.chomp
-    person = Student.new(age, name, parent_permission, classroom)
-    @people << person
-    message('Person created successfully', 'New student was added')
+
+    print 'Name: '
+    name = gets.chomp
+    [age, name]
   end
 
-  def create_teacher
-    print 'Enter Name: '
-    name = gets.chomp
-    print ' Enter Age: '
-    age = gets.chomp
+  def create_teacher(age, name)
+    # print 'Enter Name: '
+    # name = gets.chomp
+    # print ' Enter Age: '
+    # age = gets.chomp
     print 'Specialization:'
     specialization = gets.chomp
     person = Teacher.new(age, name, specialization)
@@ -113,24 +82,21 @@ class App
     message('Person created successfullly', 'New Teacher was added')
   end
 
-  def create_person
-    print 'if you want to create a student [Enter 1] or a teacher [Enter 2]:'
-    person_role = gets.chomp
-    case person_role
-    when '1'
-      create_student
-    when '2'
-      create_teacher
-    else
-      message('Your selection is invalid', 'Please make a valid selection')
-    end
+  def book_info
+    print 'Title: '
+    title = gets.chomp
+
+    print 'Author: '
+    author = gets.chomp
+    [title, author]
   end
 
   def create_book
-    print 'Title:'
-    title = gets.chomp
-    print 'Author  '
-    author = gets.chomp
+    # print 'Title:'
+    # title = gets.chomp
+    # print 'Author  '
+    # author = gets.chomp
+    title, author = book_info
     @books << Book.new(title, author)
     message('Book created successfully', 'Happy learning')
   end
