@@ -4,6 +4,7 @@ class CreatePerson
   def initialize(people)
     @people = people
     @create_student = CreateStudent.new(@people)
+    @create_teacher = CreateTeacher.new(@people)
   end
 
   def create_person
@@ -13,7 +14,7 @@ class CreatePerson
     when '1'
       @create_student.create_student
     when '2'
-      create_teacher
+      @create_teacher.create_teacher
     else
       message('Your selection is invalid', 'Please make a valid selection')
     end
