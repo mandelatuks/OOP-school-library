@@ -61,4 +61,18 @@ class Options
       message('There is no person to display', 'Add person profiles first')
     end
   end
+
+  def list_all_rentals
+    print 'Enter person ID: '
+    id = gets.chomp.to_i
+    person_details = @people.find { |person| person.id == id }
+    if person_details
+      puts 'Rentals'
+      person_details.rental.each_with_index do |rental, index|
+        puts "#{index + 1}) #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
+      end
+    else
+      message('There is no rental to display', 'Please create rental record')
+    end
+  end
 end
