@@ -51,4 +51,14 @@ class Options
       message('There is no book to display', 'kindly add some books')
     end
   end
+
+  def list_all_people
+    if @people.length.positive?
+      @people.each_with_index do |person, index|
+        puts "#{index + 1}) Name:#{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
+    else
+      message('There is no person to display', 'Add person profiles first')
+    end
+  end
 end
