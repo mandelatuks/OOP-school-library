@@ -1,7 +1,7 @@
-
+require_relative 'teacher'
 
 class CreateTeacher
-  initialize(people)
+  def initialize(people)
     @people = people
   end
 
