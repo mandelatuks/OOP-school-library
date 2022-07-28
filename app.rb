@@ -70,17 +70,7 @@ class App
     [age, name]
   end
 
-  def create_teacher(age, name)
-    # print 'Enter Name: '
-    # name = gets.chomp
-    # print ' Enter Age: '
-    # age = gets.chomp
-    print 'Specialization:'
-    specialization = gets.chomp
-    person = Teacher.new(age, name, specialization)
-    @people << person
-    message('Person created successfullly', 'New Teacher was added')
-  end
+  
 
   def book_info
     print 'Title: '
