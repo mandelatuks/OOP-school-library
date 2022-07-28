@@ -41,6 +41,13 @@
 - Twitter: [@MandelaTm1](https://twitter.com/MandelaTm1)
 - LinkedIn: [@Mandela Tumukunde](https://www.linkedin.com/in/mandela-tumukunde-794755194/) 
 
+👤 **Lembani Sakala**
+
+- GitHub: [@mandelatuks](https://github.com/mandelatuks)
+- Twitter: [@MandelaTm1](https://twitter.com/MandelaTm1)
+- LinkedIn: [@Mandela Tumukunde](https://www.linkedin.com/in/mandela-tumukunde-794755194/) 
+
+
 
 ## 🤝 Contributing
 
