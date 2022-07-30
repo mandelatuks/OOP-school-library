@@ -12,7 +12,7 @@ class CreateTeacher
     age = gets.chomp
     print 'Specialization:'
     specialization = gets.chomp
-    person = Teacher.new(age, specialization, name)
+    person = Teacher.new(nil, age, specialization, name)
     @people << person
     print('Person created successfullly', 'New Teacher was added')
   end
