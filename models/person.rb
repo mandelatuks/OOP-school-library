@@ -1,7 +1,7 @@
 # rubocop: disable Style/OptionalBooleanParameter
 
-require_relative './nameable'
-require_relative 'rental'
+require_relative './utils/nameable'
+require_relative './models/rental'
 
 class Person < Nameable
   attr_accessor :age, :name, :rentals
