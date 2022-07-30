@@ -1,4 +1,4 @@
-require_relative 'options'
+require './utils/options'
 
 class CreateRental
   def initialize(people, books)

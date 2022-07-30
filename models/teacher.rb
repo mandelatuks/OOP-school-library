@@ -1,5 +1,5 @@
 # rubocop: disable Style/OptionalBooleanParameter
-require_relative './person'
+require './models/person'
 
 class Teacher < Person
   def initialize(age, specialization, name = 'Unknown', parent_permission = true)

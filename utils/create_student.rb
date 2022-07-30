@@ -1,4 +1,4 @@
-require_relative 'student'
+require './models/student'
 
 class CreateStudent
   def initialize(people)

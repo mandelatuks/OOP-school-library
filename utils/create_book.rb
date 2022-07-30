@@ -1,6 +1,5 @@
-require_relative './models/book'
-require_relative './controllers/books'
-
+require './models/book'
+require './controllers/books'
 
 class CreateBook
   def initialize(books)
