@@ -20,7 +20,7 @@ class Options
     @rentals = load_rentals
     @create_person = CreatePerson.new(@people)
     @create_book = CreateBook.new(@books)
-    @create_rental = CreateRental.new(@people, @books)
+    @create_rental = CreateRental.new(@people, @books, @rentals)
   end
 
   def print_options
