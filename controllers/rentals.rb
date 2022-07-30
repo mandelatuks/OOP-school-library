@@ -8,7 +8,7 @@ module RentalsController
     if File.exist?(rent_file) && File.read(rent_file) != ''
       data = rent_file.read
       JSON.parse(data).each do |rental|
-        rental_store << Rental.new(rental['date'], person(rental[person.id]), book(rental[book.id]))
+        rental_store << Rental.new(rental['date'], person(rental['person_id']), book(rental['book_id']))
       end
     else
       File.write(rent_file, '[]')
@@ -19,8 +19,18 @@ module RentalsController
   def save_rental_data
     rental_store = []
     @rentals.each do |rental|
-      rental_store << { id: rental.id, person: rental.person, book: rental.book }
+      rental_store << { date: rental.date, person_id: rental.person.id, book_id: rental.book.id }
     end
     File.write('./data/rentals.json', rental_store.to_json)
+  end
+
+  private
+
+  def person(id)
+    @people.each { |per| return per if per.id == id }
+  end
+
+  def book(id)
+    @books.each { |bk| return bk if bk.id == id }
   end
 end
