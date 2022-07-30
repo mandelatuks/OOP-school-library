@@ -1,4 +1,4 @@
-require './models/student'
+require '../models/student'
 
 describe Student do
   context 'When providing student information' do

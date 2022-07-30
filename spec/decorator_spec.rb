@@ -1,6 +1,6 @@
-require './utils/capital_decorator'
-require './utils/trimmer_decorator'
-require './models/person'
+require '../utils/capital_decorator'
+require '../utils/trimmer_decorator'
+require '../models/person'
 
 describe Decorator do
   before :each do

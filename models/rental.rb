@@ -1,4 +1,4 @@
-require '../models/person'
+require './models/person'
 
 class Rental
   attr_accessor :date, :book, :person

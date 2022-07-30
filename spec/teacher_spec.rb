@@ -1,5 +1,5 @@
-require './models/teacher'
-require './models/book'
+require '../models/teacher'
+require '../models/book'
 
 describe Teacher do
   before :each do
