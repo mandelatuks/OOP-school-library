@@ -1,4 +1,4 @@
-require_relative './utils/options'
+require './utils/options'
 
 class App
   def initialize
@@ -14,9 +14,9 @@ class App
       exit if operation == 'q'
 
       @options.choose_option operation
+      @options.save_books_to_file
+      @options.save_rental_data
     end
-    @options.save_books_to_file
-    
     puts 'thank you for using the app'
   end
 end
