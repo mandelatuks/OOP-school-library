@@ -1,4 +1,4 @@
-require_relative 'options'
+require_relative './utils/options'
 
 class App
   def initialize
@@ -15,6 +15,8 @@ class App
 
       @options.choose_option operation
     end
+    @options.save_books_to_file
+    
     puts 'thank you for using the app'
   end
 end
