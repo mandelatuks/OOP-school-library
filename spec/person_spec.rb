@@ -1,4 +1,4 @@
-require '../models/person'
+require './models/person'
 
 describe Person do
   before :each do

@@ -1,5 +1,5 @@
-require '../models/book'
-require '../models/rental'
+require './models/book'
+require './models/rental'
 
 describe Book do
   before :each do
