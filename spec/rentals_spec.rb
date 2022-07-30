@@ -1,6 +1,6 @@
-require '../models/teacher'
-require '../models/book'
-require '../models/student'
+require './models/teacher'
+require './models/book'
+require './models/student'
 
 describe Rental do
   before :each do
