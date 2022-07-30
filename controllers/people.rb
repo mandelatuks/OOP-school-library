@@ -32,7 +32,7 @@ module PeopleController
       end
       next unless person.is_a?(Teacher)
 
-      people_store << { id: person.id, name: person.name, age: person.age, specialization: person.specialization,
+      people_store << { id: person.id, age: person.age, name: person.name, specialization: person.specialization,
                         className: person.class }
     end
     File.write('./data/people.json', people_store.to_json)
