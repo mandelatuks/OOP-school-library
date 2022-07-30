@@ -1,9 +1,12 @@
 # rubocop: disable Style/OptionalBooleanParameter
-require_relative './person'
+require './models/person'
 
 class Teacher < Person
-  def initialize(age, specialization, name = 'Unknown', parent_permission = true)
+  attr_reader :specialization
+
+  def initialize(id, age, specialization, name = 'Unknown', parent_permission = true)
     super(age, name, parent_permission)
+    @id = id || Random.rand(1...1000)
     @specialization = specialization
   end
 

@@ -1,7 +1,10 @@
-class Book
-  attr_accessor :title, :author, :rentals
+require './models/rental'
 
-  def initialize(title, author)
+class Book
+  attr_accessor :id, :title, :author, :rentals
+
+  def initialize(id, title, author)
+    @id = id || Random.rand(1...1000)
     @title = title
     @author = author
     @rentals = []

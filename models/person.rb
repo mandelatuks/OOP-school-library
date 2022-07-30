@@ -1,10 +1,10 @@
 # rubocop: disable Style/OptionalBooleanParameter
 
-require_relative './nameable'
-require_relative 'rental'
+require './utils/nameable'
+require './models/rental'
 
 class Person < Nameable
-  attr_accessor :age, :name, :rentals
+  attr_accessor :age, :name, :rentals, :parent_permission
   attr_reader :id
 
   def initialize(age, name = 'Unknown', parent_permission = true)

@@ -1,4 +1,4 @@
-require_relative 'student'
+require './models/student'
 
 class CreateStudent
   def initialize(people)
@@ -14,7 +14,7 @@ class CreateStudent
     parent_permission = true && gets.chomp.downcase == 'y'
     print 'classroom:'
     classroom = gets.chomp
-    @people << Student.new(age, classroom, name, parent_permission)
+    @people << Student.new(nil, age, classroom, name, parent_permission)
     print('Person created successfully', 'New student was added')
   end
 end
