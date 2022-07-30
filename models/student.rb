@@ -5,8 +5,9 @@ class Student < Person
   # holding the relationship
   attr_reader :classroom
 
-  def initialize(age, classroom, name = 'Unknown', parent_permission = true)
+  def initialize(id, age, classroom, name = 'Unknown', parent_permission = true)
     super(age, name, parent_permission)
+    @id = id || Random.rand(1...1000)
     @classroom = classroom
   end
 
