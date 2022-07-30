@@ -1,5 +1,5 @@
 # rubocop: disable Style/OptionalBooleanParameter
-require './models/person'
+require '../models/person'
 
 class Student < Person
   # holding the relationship

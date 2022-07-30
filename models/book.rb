@@ -1,4 +1,4 @@
-require './models/rental'
+require '../models/rental'
 
 class Book
   attr_accessor :id, :title, :author, :rentals
