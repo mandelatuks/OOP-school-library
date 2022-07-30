@@ -1,15 +1,18 @@
-require_relative 'create_book'
-require_relative 'create_person'
-require_relative 'create_student'
-require_relative 'create_teacher'
-require_relative 'create_rental'
+require_relative './utils/create_book'
+require_relative './utils/create_person'
+require_relative './utils/create_student'
+require_relative './utils/create_teacher'
+require_relative './utils/create_rental'
+require_relative './controllers/books'
 
 class Options
-  attr_accessor :title, :author
+  include BooksController
+  
+  # attr_accessor :title, :author
 
   def initialize
     @people = []
-    @books = []
+    @books = get_books
     @rentals = []
     @create_person = CreatePerson.new(@people)
     @create_book = CreateBook.new(@books)
