@@ -1,8 +1,9 @@
 require '../models/book'
+require '../models/rental'
 
 describe Book do
   before :each do
-    @book = Book.new 'Freedom', 'Nelson'
+    @book = Book.new nil, 'Freedom', 'Nelson'
   end
 
   it 'should print the book title' do
