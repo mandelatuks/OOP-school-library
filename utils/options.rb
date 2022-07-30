@@ -5,15 +5,17 @@ require './utils/create_teacher'
 require './utils/create_rental'
 require './controllers/books'
 require './controllers/rentals'
+require './controllers/people'
 
 class Options
   include BooksController
   include RentalsController
+  include PeopleController
 
   # attr_accessor :title, :author
 
   def initialize
-    @people = []
+    @people = load_people
     @books = load_books
     @rentals = load_rentals
     @create_person = CreatePerson.new(@people)
